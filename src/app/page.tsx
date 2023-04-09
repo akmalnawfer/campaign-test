@@ -84,7 +84,7 @@ export default function Home(): JSX.Element {
         <nav className="mx-auto flex max-w-4xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <div className="image-wrapper mr-3">
-              <img className="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+              <img className="inline-block h-12 w-12 rounded-full ring-2 ring-white" src={`https://i.pravatar.cc/150?u=${lead.fullName}`} alt="" />
             </div>
             <div className="title-wrapper">
               <h1 className="text-lg text-black">{lead.fullName}</h1>
@@ -161,8 +161,8 @@ export default function Home(): JSX.Element {
         <div className="mx-auto flex max-w-4xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             {/* orged approve on right side for UX as default forward buttons are in right */}
-            <button disabled={isLoading} className={`rounded-full p-2 w-6/12 uppercase mr-3 ${isLoading? 'bg-slate-200':' bg-red-400'}`} onClick={onCancel}>Cancel</button>
-            <button disabled={isLoading} className={`rounded-full p-2 w-6/12 uppercase mr-3 ${isLoading? 'bg-slate-200':'bg-black'}`} onClick={onApprove}>Approve</button>
+            <button disabled={isLoading} className={`rounded-full text-slate-50 p-2 w-6/12 uppercase mr-3 ${isLoading? 'bg-slate-200':' bg-red-400'}`} onClick={onCancel}>Cancel</button>
+            <button disabled={isLoading} className={`rounded-full text-slate-50 p-2 w-6/12 uppercase mr-3  ${isLoading? 'bg-slate-200':'bg-black'}`} onClick={onApprove}>Approve</button>
           </div>
         </div>
       </footer>
